@@ -6,14 +6,14 @@ Citizen.CreateThread(function()
         TriggerEvent('esx_status:getStatus', 'hunger', function(status)
             if status.val < 300000 then
                 -- exports['okokNotify']:Alert("Jedlo", "Chod sa najest", 3000, 'warning') -- Delete (--) if you want to use okokNotify
-                  exports["esx_notify"]:Notify("info", 3000, "Go Eat") - You can change it to your message
+                  exports["esx_notify"]:Notify("info", 3000, "Go Eat") -- You can change it to your message
             end
         end)
 
         TriggerEvent('esx_status:getStatus', 'thirst', function(status)
             if status.val < 300000 then
                 -- exports['okokNotify']:Alert("Voda", "Chod sa napit", 3000, 'warning') -- Delete (--) if you want to use okokNotify
-                  exports["esx_notify"]:Notify("info", 3000, "Go Drink") - You can change it to your message
+                  exports["esx_notify"]:Notify("info", 3000, "Go Drink") -- You can change it to your message
             end
         end)
     end
