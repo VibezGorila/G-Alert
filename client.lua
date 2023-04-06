@@ -16,5 +16,12 @@ Citizen.CreateThread(function()
                   exports["esx_notify"]:Notify("info", 3000, "Go Drink") -- You can change it to your message
             end
         end)
+
+        TriggerEvent('esx_status:getStatus', 'stress', function(status)
+            if status.val > 100000 then
+                -- exports['okokNotify']:Alert("Stress", "Si moc v strese daj sa do chillu", 3000, 'warning') -- Delete (--) if you want to use okokNotify
+                  exports["esx_notify"]:Notify("info", 3000, "You are in stress chill down") -- You can change it to your message
+            end
+        end)
     end
 end)
